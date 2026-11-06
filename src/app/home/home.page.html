@@ -7,15 +7,16 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Photo Galery</ion-title>
     </ion-toolbar>
   </ion-header>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>
-      Start with Ionic
-      <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a>
-    </p>
+    <button (click)="takePicture()">
+      <ion-icon name="camera-outline" class="camera-button" color="primary">
+
+      </ion-icon>
+    </button>
+    <img *ngIf="photo" [src]="photo" alt="imagen-subida"/>
   </div>
 </ion-content>
